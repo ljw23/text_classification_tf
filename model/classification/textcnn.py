@@ -1,11 +1,14 @@
-#!usr/bin/env python
-# coding:utf-8
-# @time     :2019/10/30 10:51
-# @author   :liteng
-# @function :tensorflow2.0 for textcnn
-# @paper: Convolutional Neural Networks for Sentence Classiﬁcation
+# -*- encoding: utf-8 -*-
+'''
+@File    :   textcnn.py
+@Time    :   2020/08/21 11:08:02
+@Author  :   Liu Junwen 
+@Version :   1.0
+@Contact :   ljw23@mail.ustc.edu.cn
+@Desc    :   None
+'''
 
-
+# here put the import lib
 import tensorflow as tf
 from tensorflow import keras
 

@@ -105,6 +105,7 @@ class TrainingDataset(object):
         """处理输入语料（corpus），最终转为tfrecord格式（record_name）
         自带多进程支持，如果cpu核心数多，请加大workers和max_queue_size。
         """
+        #todo add paraller method
         writer = tf.io.TFRecordWriter(record_name)
         globals()['count'] = 0
         instances = self.paragraph_process(corpus)
@@ -160,6 +161,7 @@ class TrainingEncodingDataset(object):
         """参数说明：
             tokenizer必须是bert4keras自带的tokenizer类；
         """
+        #todo liteng所写对于一般数据，不需要mask，sep等，需要优化，不需指定labels，从文件中读
         self.bc = bert_client
         self.sequence_length = sequence_length
         self.labels = labels
